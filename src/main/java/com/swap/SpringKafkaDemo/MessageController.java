@@ -18,6 +18,13 @@ public class MessageController {
 
     @PostMapping
     public void publish(@RequestBody MessageRequest request) {
-        kafkaTemplate.send("swapcode", request.message());
+        kafkaTemplate.send("swaptopic", request.message())
+        .whenComplete((result, ex) -> {
+            if (ex == null) {
+                System.out.println("Message sent");
+            } else {
+                ex.printStackTrace();
+            }
+        });;
     }
 }
