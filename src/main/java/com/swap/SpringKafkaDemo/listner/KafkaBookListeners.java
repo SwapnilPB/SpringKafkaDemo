@@ -1,17 +1,11 @@
-package com.swap.SpringKafkaDemo;
+package com.swap.SpringKafkaDemo.listner;
 
 import com.swap.SpringKafkaDemo.entity.Book;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
 @Component
-public class KafkaListeners {
-
-    @KafkaListener(topics = "swaptopic",
-            groupId = "swap-group")
-   public void listener(String data) {
-        System.out.println("Listener received : " + data + " :) ");
-    }
+public class KafkaBookListeners {
 
     @KafkaListener(topics = "booktopic",
             groupId = "book-group",

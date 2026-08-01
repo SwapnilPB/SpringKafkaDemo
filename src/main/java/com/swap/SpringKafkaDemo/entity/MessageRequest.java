@@ -1,4 +1,4 @@
-package com.swap.SpringKafkaDemo;
+package com.swap.SpringKafkaDemo.entity;
 
 public record MessageRequest(String message) {
 }

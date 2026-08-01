@@ -1,14 +1,12 @@
 package com.swap.SpringKafkaDemo.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class Book {
     private String bookName;
     private String isbn;
