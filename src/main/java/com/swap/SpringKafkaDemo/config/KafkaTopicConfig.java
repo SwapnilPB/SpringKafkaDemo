@@ -27,4 +27,9 @@ public class KafkaTopicConfig {
     public NewTopic newTopic() {
         return new NewTopic("swaptopic", 2, (short) 1);
     }
+
+    @Bean
+    public NewTopic bookTopic() {
+        return new NewTopic("booktopic", 2, (short) 1);
+    }
 }
